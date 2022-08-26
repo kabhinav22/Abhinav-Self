@@ -20,6 +20,7 @@ html = read_html("https://www.icc-cricket.com/rankings/womens/player-rankings/od
 rating = html_elements(html, ".table-body__cell.rating")
 rating = html_text(rating)
 rating
+as.numeric(rating)
 
 icc_rank = data.frame(ranking, name, team, rating)
 icc_rank
