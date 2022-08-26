@@ -22,3 +22,4 @@ rating = html_text(rating)
 rating
 
 icc_rank = data.frame(ranking, name, team, rating)
+icc_rank
