@@ -72,15 +72,15 @@ abline(h = 5, v = 5, col = "red")
 
 
 # 
-square = function(n)
+square = function(x)
 {
-  y = n^2
+  y = x^2
   return(y)
 }
 
-x = square 
-n = 1:10
-plot(x,y) ?
+y = square(x) 
+x = 1:10
+plot(x,y)
 plot(x,y, type = "l" , xlab = "x" , ylab = "y", main = "Y = X^2 Plot")
 abline(h = 25 , v = 25 , col = "red")
 
