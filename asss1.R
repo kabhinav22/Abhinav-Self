@@ -178,3 +178,40 @@ x <- 0:5000
 all_c <- dgeom(x, p = .10)/dpois(x, lambda = 10)
 max(all_c)
 hist(all_c)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# using a box as a proposal
+##############################
+set.seed(1)
+ellipse <- function(a,b)
+{
+  accept <- 0
+  counter <- 0 # count the number of loop
+  while(accept == 0)
+  {
+    counter <- counter + 1
+    U1 <- runif(1)
+    U2 <- runif(1)
+    U11 <- -a + 2*a*U1
+    U21 <- -b + 2*b*U2
+    if(U11ˆ2/a + U21ˆ2/b <= 1) 
+    {
+      accept <- 1
+      return(c(prop, counter))
+    }
+  }
+}
