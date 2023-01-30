@@ -193,7 +193,6 @@ hist(all_c)
 
 
 
-
 # using a box as a proposal
 ##############################
 set.seed(1)
@@ -208,10 +207,12 @@ ellipse <- function(a,b)
     U2 <- runif(1)
     U11 <- -a + 2*a*U1
     U21 <- -b + 2*b*U2
-    if(U11ˆ2/a + U21ˆ2/b <= 1) 
+    if(U11^2/a + U21^2/b <= 1) 
     {
       accept <- 1
-      return(c(prop, counter))
+      return(c(U11,U21, counter))
     }
   }
 }
+
+ellipse(a=2,b=3)
